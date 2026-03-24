@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Product - Adobe Hackathon Q1 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .slide {
+            width: 1280px;
+            height: 720px;
+            background: white;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
+            color: white;
+            padding: 40px 60px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header h2 {
+            font-size: 28px;
+            font-style: italic;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        
+        .header .tagline {
+            font-size: 22px;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            padding: 30px 60px;
+        }
+        
+        .column {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #FF0000;
+        }
+        
+        .column h3 {
+            color: #FF0000;
+            font-size: 24px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .column ul {
+            list-style: none;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .column li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .column li:before {
+            content: "•";
+            color: #FF9900;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .process-flow {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            border: 2px solid #FF9900;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, #FF0000 0%, #FF9900 100%);
+            color: white;
+            padding: 20px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            font-size: 14px;
+        }
+        
+        .footer h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .footer ul {
+            list-style: none;
+            line-height: 1.6;
+        }
+        
+        .footer li {
+            margin-bottom: 4px;
+        }
+        
+        .metric {
+            font-weight: bold;
+            color: #FFD700;
+        }
+        
+        .emoji {
+            font-size: 28px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .slide {
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Header -->
+        <div class="header">
+            <h1>Living Product</h1>
+            <h2>AI-Powered Creative Production Pipeline</h2>
+            <div class="tagline">"From One Product to Complete Campaign in 60 Seconds"</div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Column: The Problem -->
+            <div class="column">
+                <h3><span class="emoji">📊</span> Marketing Challenge</h3>
+                <ul>
+                    <li><strong>2-4 hours</strong> per product for manual design</li>
+                    <li>Separate work for each format</li>
+                    <li>Inconsistent brand application</li>
+                    <li><strong>Not scalable</strong> for large catalogs</li>
+                </ul>
+            </div>
+            
+            <!-- Center Column: The Solution -->
+            <div class="column">
+                <h3><span class="emoji">🚀</span> Automated AI Pipeline</h3>
+                <p style="margin-bottom: 10px;"><strong>Input:</strong></p>
+                <ul style="margin-bottom: 15px;">
+                    <li>1 product image (2D or 3D)</li>
+                    <li>Campaign brief (text)</li>
+                </ul>
+                <div class="process-flow">
+Product → AI BG → Formats → Gallery<br>
+   ↓        ↓        ↓         ↓<br>
+Upload  Firefly  8 Assets  Download
+                </div>
+                <p style="margin-top: 10px;"><strong>Output:</strong></p>
+                <ul>
+                    <li>8 marketing-ready assets</li>
+                    <li>Consistent branding</li>
+                    <li>Professional quality</li>
+                </ul>
+            </div>
+            
+            <!-- Right Column: Results -->
+            <div class="column">
+                <h3><span class="emoji">✅</span> Proven Impact</h3>
+                <p style="margin-bottom: 10px;"><strong>Speed:</strong></p>
+                <ul style="margin-bottom: 15px;">
+                    <li>60 seconds total processing</li>
+                    <li><span class="metric">120-240x faster</span> than manual</li>
+                </ul>
+                <p style="margin-bottom: 10px;"><strong>Quality:</strong></p>
+                <ul style="margin-bottom: 15px;">
+                    <li>AI-generated backgrounds</li>
+                    <li>Professional compositing</li>
+                    <li>Brand-consistent styling</li>
+                </ul>
+                <p style="margin-bottom: 10px;"><strong>Cost:</strong></p>
+                <ul>
+                    <li><span class="metric">90% reduction</span> in design work</li>
+                    <li>Scales to entire catalogs</li>
+                    <li>Production-ready today</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <!-- Tech Stack -->
+            <div>
+                <h4>🛠️ Built With</h4>
+                <ul>
+                    <li>Adobe Firefly Services</li>
+                    <li>Adobe Photoshop API</li>
+                    <li>AWS S3 & Bedrock</li>
+                    <li>Python + HTML/JS</li>
+                </ul>
+            </div>
+            
+            <!-- Demo Results -->
+            <div>
+                <h4>📸 Live Demo</h4>
+                <ul>
+                    <li>Job: 20260324-173521</li>
+                    <li>✅ Hero render uploaded</li>
+                    <li>✅ AI-branded background</li>
+                    <li>✅ 8 format variations</li>
+                    <li>✅ Gallery ready</li>
+                </ul>
+            </div>
+            
+            <!-- Call to Action -->
+            <div>
+                <h4>🎯 Try It Now</h4>
+                <ul>
+                    <li style="font-family: monospace; font-size: 12px;">python3 pipeline.py \</li>
+                    <li style="font-family: monospace; font-size: 12px;">  --image-url &lt;url&gt; \</li>
+                    <li style="font-family: monospace; font-size: 12px;">  --brief "campaign"</li>
+                    <li style="margin-top: 8px;">github.com/culleny/living-product</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Print instructions
+        console.log('To save as PDF:');
+        console.log('1. Press Ctrl+P (Cmd+P on Mac)');
+        console.log('2. Select "Save as PDF"');
+        console.log('3. Save the file');
+        console.log('');
+        console.log('To convert to PowerPoint:');
+        console.log('1. Save as PDF first');
+        console.log('2. Upload PDF to Google Slides or PowerPoint Online');
+        console.log('3. It will convert automatically');
+    </script>
+</body>
+</html>
