@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Product - Campaign Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Living Product</h1>
+            <p class="subtitle">AI-Powered Creative Production Pipeline</p>
+        </header>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading campaign assets...</p>
+        </div>
+
+        <div id="error" class="error" style="display: none;">
+            <p>Failed to load manifest. Please check the manifest URL.</p>
+        </div>
+
+        <div id="gallery" style="display: none;">
+            <div class="job-info">
+                <h2 id="job-id"></h2>
+                <p id="timestamp"></p>
+                <div id="brief-params"></div>
+            </div>
+
+            <div class="assets-grid">
+                <!-- Hero Render -->
+                <div class="asset-card" id="card-hero">
+                    <div class="asset-label">Hero Render</div>
+                    <img id="img-hero" alt="Hero Render">
+                    <button class="download-btn" data-asset="hero">Download</button>
+                </div>
+
+                <!-- Product Cutout -->
+                <div class="asset-card" id="card-cutout">
+                    <div class="asset-label">Product Cutout</div>
+                    <img id="img-cutout" alt="Product Cutout">
+                    <button class="download-btn" data-asset="cutout">Download</button>
+                </div>
+
+                <!-- Branded Hero -->
+                <div class="asset-card" id="card-branded">
+                    <div class="asset-label">Branded Hero</div>
+                    <img id="img-branded" alt="Branded Hero">
+                    <button class="download-btn" data-asset="branded">Download</button>
+                </div>
+
+                <!-- Billboard -->
+                <div class="asset-card wide" id="card-billboard">
+                    <div class="asset-label">Billboard (1920x1080)</div>
+                    <img id="img-billboard" alt="Billboard">
+                    <button class="download-btn" data-asset="billboard">Download</button>
+                </div>
+
+                <!-- Video -->
+                <div class="asset-card wide" id="card-video">
+                    <div class="asset-label">Video</div>
+                    <video id="video-player" controls></video>
+                    <button class="download-btn" data-asset="video">Download</button>
+                </div>
+
+                <!-- Story Format -->
+                <div class="asset-card tall" id="card-story">
+                    <div class="asset-label">Story (9:16)</div>
+                    <img id="img-story" alt="Story Format">
+                    <button class="download-btn" data-asset="story">Download</button>
+                </div>
+
+                <!-- Square Format -->
+                <div class="asset-card" id="card-square">
+                    <div class="asset-label">Square (1:1)</div>
+                    <img id="img-square" alt="Square Format">
+                    <button class="download-btn" data-asset="square">Download</button>
+                </div>
+
+                <!-- Banner Format -->
+                <div class="asset-card wide" id="card-banner">
+                    <div class="asset-label">Banner (16:9)</div>
+                    <img id="img-banner" alt="Banner Format">
+                    <button class="download-btn" data-asset="banner">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "adobe": {
+    "client_id": "YOUR_CLIENT_ID",
+    "client_secret": "YOUR_CLIENT_SECRET",
+    "scopes": [
+      "openid",
+      "AdobeID",
+      "firefly_api",
+      "ff_apis",
+      "creative_sdk",
+      "substance3d_api.jobs.create",
+      "substance3d_api.spaces.create"
+    ]
+  },
+  "aws": {
+    "region": "us-west-2",
+    "bucket_prefix": "living-product"
+  }
+}
